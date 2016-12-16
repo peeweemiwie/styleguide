@@ -1,0 +1,114 @@
+/*=========================================
+Variables: Default Values
+=========================================== */
+
+// Analytics dropdown colors. Remove unused before pull request.
+$cool-grey: #8e9a9f;
+$silver: #bcc6ca;
+$gunmetal: #526269;
+$pale-grey: #f5f8fa;
+
+//Color reference (need renaming)
+$cota-blue: #17658A;
+$sidebar-expanded-fill: #121821;
+$body-fill: #D4DBE3;
+$fill-gray: #F0F2F3;
+
+//Color reference
+$blue: #31ADE3;
+$green: #43B649;
+$yellow: #E6BA25;
+$red: #D93646;
+$light-red: #F2E7E8;
+$purple: #B936D4;
+$white: #ffffff;
+$black: #1F2835;
+$light-gray: #666666;
+$gray: #333333;
+$navy: #002332;
+$marine-blue: #004463;
+$dark-sky-blue: #31ade3;
+$deep-sea-blue: #005d86;
+$pinkish-gray: #cccccc;
+$warm-gray: #999999;
+
+//Text colors (need renaming)
+$modal-text: #5C7179;
+$text-gray: #8E9A9F;
+$text-gray-sidebar: #70838C;
+$text-gray-two: #737C80;
+$text-gray-two-sidebar: #BED4EB;
+$text-gray-three: #646C70;
+$content-header-gray: #6F848C;
+$disabled-text-gray: #D0D9DD;
+
+//Border colors:
+$sidebar-border: #B8C0C2;
+$border-gray: #BCC6CA;
+$border-dark-gray: #6D848D;
+$border-tab: #D3DBE4;
+$disabled-border-gray: #D0D9DD;
+$border-radius:5pt;
+
+//Tooltip colors:
+$tooltip-color: rgba(0, 0, 0, .85);
+$tooltip-text-color: $white;
+$tooltip-green: $green;
+$tooltip-yellow: $yellow;
+$tooltip-red: $red;
+
+//Error colors:
+$error-input-bg: $light-red;
+
+//Treatments colors:
+$faint-blue: #F6FDFF;
+
+$flash-red: $red;
+$flash-yellow: $yellow;
+$flash-green: $green;
+$base-accent-color: $cota-blue;
+
+$base-spacing: 1em;
+
+$tooltip-height: 22px;
+
+//Timestamp tooltip variables
+$large-sprite-height: 35px;
+$arrow-size-large: 10px;
+$timestamp-height: $arrow-size-large + $large-sprite-height;
+$timestamp-radius: 3pt;
+$arrow-size: 6px;
+
+$universal-font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font-family: $universal-font-family;
+$fixed-font-family: $universal-font-family;
+$fixed-font-size: 12pt;
+$fixed-line-height: 1;
+$heading-font-weight: 300;
+
+$navigation-list-small: patient-grey diagnosis-grey treatment-grey outcome-grey checkfirst edit dose checksecond down up x delete;
+$navigation-list-normal: patient diagnosis treatment outcome search add ecog toxicity record-details reset dashboard;
+$navigation-list-large: hospital provider add;
+
+$header-height:60px;
+$grid-columns: 10;
+$sidebar-width:200px;
+$sidebar-sm-width: 100px;
+$nav-dd-width: 360px;
+$footer-height: 87px;
+
+$min-width: 900px;
+$break-small:320px;
+$break-medium:1000px;
+$break-large:1200px;
+$break-huge:1800px;
+
+$pad20-standard: 20px;
+
+$input-width: 85px;
+
+
+$datePickerInputWidth: 100px;
+$datepickerWidth: 220px;
+$datepickerPadding: 5px;
+$datepickerElSize: calc((#{$datepickerWidth} - (#{$datepickerPadding} + 1px) * 2) / 7);

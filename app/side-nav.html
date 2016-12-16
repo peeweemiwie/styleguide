@@ -1,0 +1,57 @@
+<aside id="app-sidebar" class="ng-scope">
+
+  <a id="logo" ng-class="{active: $state.includes('clinic.entity.patient.search')}" ui-sref="clinic.entity.patient.search()" href="#/g/5/e/clinic_entity%3Acb72b4cf-284b-494a-a681-bd1665e3aa82/p/search" class="active">
+    <img src="images/logo-white.png">
+    <p class="center small-caps white">Helix</p>
+  </a>
+
+  <div class="sidebar-nav-wrap">
+
+    <ul id="app-sidebar-navigation">
+      <li>
+        <h5 class="sidebar-subheader small-caps">General</h5>
+      </li>
+
+      <!-- ngIf: $state.includes('clinic.entity.patient.id') -->
+
+      <!-- ngIf: !$state.includes('clinic.entity.patient.id') --><li class="sidebar-item ng-scope" ng-if="!$state.includes('clinic.entity.patient.id')">
+        <a ng-class="{active: $state.includes('clinic.entity.patient.search')}" type="search" ui-sref="clinic.entity.patient.search()" href="#/g/5/e/clinic_entity%3Acb72b4cf-284b-494a-a681-bd1665e3aa82/p/search" class="active">
+          <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" icon="ic_dashboard" class="sidebar-icon ng-isolate-scope">
+    <defs></defs>
+    <path d="M0,15.9991283 C0,17.1048454 0.893007988,18 2.00087166,18 L15.9991283,18 C17.1048454,18 18,17.106992 18,15.9991283 L18,2.00087166 C18,0.895154567 17.106992,0 15.9991283,0 L2.00087166,0 C0.895154567,0 0,0.893007988 0,2.00087166 L0,15.9991283 Z M2,15.9991283 L2,2.00087166 C2,1.99865382 1.99865059,2 2.00087166,2 L15.9991283,2 C16.0013462,2 16,1.99865059 16,2.00087166 L16,15.9991283 C16,16.0013462 16.0013494,16 15.9991283,16 L2.00087166,16 C1.99865382,16 2,16.0013494 2,15.9991283 Z M1,6 L17,6 C17.5522847,6 18,5.55228475 18,5 C18,4.44771525 17.5522847,4 17,4 L1,4 C0.44771525,4 0,4.44771525 0,5 C0,5.55228475 0.44771525,6 1,6 Z M5,13 L8,13 C8.55228475,13 9,12.5522847 9,12 L9,9 C9,8.44771525 8.55228475,8 8,8 L5,8 C4.44771525,8 4,8.44771525 4,9 L4,12 C4,12.5522847 4.44771525,13 5,13 Z M6,11 L6,10 L7,10 L7,11 L6,11 Z M11,10 L13,10 C13.5522847,10 14,9.55228475 14,9 C14,8.44771525 13.5522847,8 13,8 L11,8 C10.4477153,8 10,8.44771525 10,9 C10,9.55228475 10.4477153,10 11,10 Z M11,13 L13,13 C13.5522847,13 14,12.5522847 14,12 C14,11.4477153 13.5522847,11 13,11 L11,11 C10.4477153,11 10,11.4477153 10,12 C10,12.5522847 10.4477153,13 11,13 L11,13 Z" id="ic-dashboard" stroke="none"></path>
+</svg>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- end ngIf: !$state.includes('clinic.entity.patient.id') -->
+
+      <!-- ngIf: $state.includes('clinic.entity.patient.id') -->
+
+      <!-- ngIf: !$state.includes('clinic.entity.patient.id') --><li class="sidebar-item ng-scope" ng-if="!$state.includes('clinic.entity.patient.id')">
+        <a ng-class="{active: $state.includes('clinic.entity.patient.create')}" ui-sref="clinic.entity.patient.create()" href="#/g/5/e/clinic_entity%3Acb72b4cf-284b-494a-a681-bd1665e3aa82/p/create">
+          <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" icon="ic_addpatient" class="sidebar-icon ng-isolate-scope">
+    <defs></defs>
+    <path d="M8,10 L5,10 C4.44771525,10 4,9.55228475 4,9 C4,8.44771525 4.44771525,8 5,8 L8,8 L8,5 C8,4.44771525 8.44771525,4 9,4 C9.55228475,4 10,4.44771525 10,5 L10,8 L13,8 C13.5522847,8 14,8.44771525 14,9 C14,9.55228475 13.5522847,10 13,10 L10,10 L10,13 C10,13.5522847 9.55228475,14 9,14 C8.44771525,14 8,13.5522847 8,13 L8,10 Z M8.99894584,0 C4.02819991,0 0,4.02824176 0,8.99929714 C0,13.97104 4.02818459,18 8.99894584,18 C13.9700279,18 18,13.9707194 18,8.99929714 C18,4.02856233 13.9700126,0 8.99894584,0 Z M8.99894584,2 C12.8656014,2 16,5.13329021 16,8.99929714 C16,12.866073 12.8655352,16 8.99894584,16 C5.13284027,16 2,12.8665567 2,8.99929714 C2,5.13280661 5.13277406,2 8.99894584,2 Z" id="ic-addpatient" stroke="none"></path>
+</svg>
+         <span>Add Patient</span>
+        </a>
+      </li><!-- end ngIf: !$state.includes('clinic.entity.patient.id') -->
+    </ul>
+
+    <!-- ngIf: $state.includes('clinic.entity.patient.id') -->
+
+    <ul id="app-sidebar-logout">
+      <li class="sidebar-logout">
+        <clinic-entity-user-logout><a ui-sref="auth.logout()" href="#/auth/logout">
+  <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" icon="ic_user" class="sidebar-icon ng-isolate-scope">
+    <defs></defs>
+    <path d="M2,9 C2,5.13400675 5.13400675,2 9,2 C12.8659932,2 16,5.13400675 16,9 C16,12.8659932 12.8659932,16 9,16 C5.13400675,16 2,12.8659932 2,9 Z M18,9 C18,4.02943725 13.9705627,0 9,0 C4.02943725,0 0,4.02943725 0,9 C0,13.9705627 4.02943725,18 9,18 C13.9705627,18 18,13.9705627 18,9 Z M8.99930435,3.5 C7.32540592,3.5 6,4.92704505 6,6.65205028 C6,8.45752824 7.31127276,10.5 8.99930435,10.5 C10.6872439,10.5 12,8.45718207 12,6.65205028 C12,4.92713426 10.6732367,3.5 8.99930435,3.5 Z M8.99930435,8.5 C8.64885703,8.5 8,7.48932381 8,6.65205028 C8,5.99995026 8.46434206,5.5 8.99930435,5.5 C9.53476328,5.5 10,6.00043234 10,6.65205028 C10,7.48884351 9.35021042,8.5 8.99930435,8.5 Z M6.68821658,12.9496562 L5.84579462,12.8485419 C6.29810622,13.1358883 6.5345105,13.283387 6.77089916,13.4141529 C7.48730731,13.8104571 8.14998703,14 8.99992278,14 C9.84985852,14 10.5125382,13.8104571 11.2289464,13.4141529 C11.465335,13.283387 11.7017393,13.1358883 12.1540509,12.8485419 L11.311629,12.9496562 C12.2836739,13.2703361 13.1675774,14.0235207 13.6460911,14.9181353 C13.9065769,15.4051318 14.5125311,15.588755 14.9995275,15.3282691 C15.486524,15.0677833 15.6701472,14.4618291 15.4096613,13.9748327 C14.6911248,12.6314784 13.4024773,11.5334068 11.9382166,11.0503438 C11.6563199,10.9573454 11.3476765,10.9943913 11.0957946,11.1514581 C10.6278854,11.4479939 10.4435722,11.5629916 10.2608362,11.6640779 C9.82688754,11.9041305 9.49170875,12 8.99992278,12 C8.5081368,12 8.17295801,11.9041305 7.73900936,11.6640779 C7.55627332,11.5629916 7.37196017,11.4479939 6.90405093,11.1514581 C6.65216908,10.9943913 6.34352568,10.9573454 6.06162897,11.0503438 C4.63002307,11.5226339 3.36551386,12.5829326 2.63770262,13.8878475 C2.36868241,14.370182 2.54160782,14.9792754 3.02394232,15.2482956 C3.50627682,15.5173158 4.11537016,15.3443904 4.38439037,14.8620559 C4.87052244,13.9904549 5.73787164,13.2631773 6.68821658,12.9496562 Z" id="ic-user" stroke="none"></path>
+</svg>
+  <span>Logout</span>
+</a>
+</clinic-entity-user-logout>
+      </li>
+    </ul>
+
+  </div>
+
+</aside>

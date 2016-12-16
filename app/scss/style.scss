@@ -1,0 +1,22 @@
+#styleguide {
+  @import 'global';
+  @import 'mixin';
+  @import 'typography';
+  @import 'variables';
+  @import 'variables2';
+  @import 'buttons';
+  @import 'header';
+
+// add to helix
+  @import 'helix';
+
+// style guide specific styles
+  @import 'card';
+  @import 'color';
+  @import 'layout';
+  @import 'side-nav';
+  @import 'main';
+
+// override helix style to display in style guide
+  @import 'override';
+}

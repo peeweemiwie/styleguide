@@ -1,0 +1,103 @@
+.document-viewer {
+  display: flex;
+  height: 100%;
+}
+
+.document {
+  border: 1px solid red;
+  width: 60%;
+}
+
+.document-pdf {
+  background: #ddd;
+  height: 100%;
+}
+
+.dt {
+  color: $text-gray;
+  font-size:  15px;
+}
+
+.dd {
+  margin-left: 0;
+}
+
+.document-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+  &> * {
+    //border: 1px solid red;
+  }
+}
+
+.wrapper {
+  padding: 0 20px;
+}
+
+.divider {
+  position: relative;
+  &:before {
+    background-color: $text-gray;;
+    content: "";
+    display: block;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+  }
+}
+
+.btn.close {
+  height: 50px;
+  width: 50px;
+}
+
+.flex-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.arrow {
+  background-color: transparent;
+  border: 0;
+  height: 30px;
+  width: 30px;
+}
+
+.arrow.right {
+  transform: rotate(180deg);
+}
+
+.button-wrapper .arrow:first-of-type {
+  border-right: 2px solid #ccc;
+}
+
+.button-wrapper {
+  @extend .btn;
+  border-color: #ccc;
+background: white;
+margin-left: 10px;
+}
+
+.table {
+  border-collapse: collapse;
+}
+.thead {
+  background-color: $fill-gray;
+}
+.td, .th {
+  border: 1px solid gray;
+}
+
+.tr .td:nth-of-type(2),
+.tr .date {
+  width: 15%;
+}
+
+.date,
+.time {
+  font-size: 15px;
+}

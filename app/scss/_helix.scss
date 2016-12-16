@@ -1,0 +1,40 @@
+// styles to add in Helix
+
+.top-header {
+  @include clearfix();
+  background: $marine-blue;
+  color: $text-gray;
+  padding: 15px 24px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.def-list {
+
+  display: inline-block;
+  margin-right: 24px;
+  // margin: 14px auto 5px 25px;
+  .def-term,
+  .def-desc {
+    white-space: nowrap;
+  }
+  .def-term {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .8px;
+    margin-bottom: 5px;
+    opacity: .5;
+    text-transform: uppercase;
+    //margin: 14px 5px 5px 25px;
+    //white-space: nowrap;
+  }
+  .def-desc {
+    color: $white;
+    font-size: 20px;
+    letter-spacing: .4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    //margin: 5px 5px 5px 25px;
+  }
+}

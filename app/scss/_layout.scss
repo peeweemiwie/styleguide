@@ -1,0 +1,40 @@
+.example-wrapper {
+  .example {
+    @extend .card;
+    &:before {
+      content: "example";
+      top: -24px;
+    }
+  }
+  pre.language-markup {
+    &:before {
+      content: "snippets";
+      top: 0;
+    }
+  }
+  .example,
+  pre.language-markup {
+    border-top-width: 30px;
+    width: 100%;
+    position: relative;
+    &:before {
+      color: $white;
+      display: block;
+      position: absolute;
+      right: 10px;
+    }
+  }
+  &.half {
+    display: flex;
+    .example,
+    pre.language-markup {
+      max-width: 500px;
+    }
+  }
+  &.full {
+    .example,
+    pre.language-markup {
+      max-width: 1010px;
+    }
+  }
+}

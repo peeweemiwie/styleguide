@@ -1,0 +1,39 @@
+.btn {
+  background-color: $white;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
+.btn-default {
+  border-color: $light-gray;
+}
+.btn-primary {
+  border-color: $cota-blue;
+}
+.btn-danger {
+  border-color: $red;
+}
+.btn-fill-default {
+  @extend .btn-default;
+  background-color: $light-gray;
+  color: $white;
+}
+.btn-fill-primary {
+  @extend .btn-primary;
+  background-color: $cota-blue;
+  color: $white;
+}
+.btn-fill-danger {
+  @extend .btn-danger;
+  background-color: $red;
+  color: $white;
+}
+.btn-sm {
+  padding: 2px 5px;
+}
+.btn-md {
+  padding: 5px 10px;
+}
+.btn-lg {
+  padding: 10px 20px;
+}

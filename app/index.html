@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="styleguide">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/prism.css" data-noprefix />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <script src="js/venders/jquery.min.js"></script>
+  <script src="js/venders/angular.js"></script>
+  <script src="js/app.js"></script>
+  <title>Style Guide</title>
+</head>
+<body ng-controller="styleguideController" id="styleguide">
+<div class="page-wrapper">
+  <aside class="side-nav">
+    <!-- <ul>
+      <li class="sidebar-item" ng-repeat="link in links">
+        <a href="#{{link.url}}"><span>{{link.name}}</span></a>
+      </li>
+    </ul> -->
+  </aside>
+  <main class="main">
+    <header>
+      <h1>style guide</h1>
+    </header>
+    <section id="color">
+      <h2 class="h2">Color</h2>
+      <div class="color-panel" ng-repeat="color in colors">
+        <p>{{color.comment}}</p>
+        <div class="card-outer-wrapper">
+          <ul class=" card-wrapper" ng-repeat="detail in color.colorDetails">
+          <li class="color-panel-list card" style="border-top-color: #{{detail.colorHex}}">
+            <span class="color-swatch" style="background-color: #{{detail.colorHex}}"></span>
+            <ul class="card-list">
+              <li>#{{detail.colorHex}}</li>
+              <li>rgba{{detail.colorRGBA}}</li>
+              <li>${{detail.colorVar}}</li>
+            </ul>
+            <p class="card-text">{{detail.usage}}</p>
+          </li>
+        </ul>
+        </div>
+      </div>
+    </section>
+    <section id="typography">
+
+      <h2 class="h2">Typography</h2>
+<div class="example-wrapper half">
+<div class="example">
+<h1 class="h1">Header1</h1>
+<h2 class="h2">Header2</h2>
+<h3 class="h3">Header3</h3>
+<h4 class="h4">Header4</h4>
+<h5 class="h5">Header5</h5>
+<h6 class="h6">Header6</h6>
+</div>
+</div>
+
+<h2 class="h2">Buttons</h2>
+<div class="example-wrapper half">
+<div class="example">
+<button class="btn btn-default btn-sm">Default</button>
+<button class="btn btn-primary btn-md">Primary</button>
+<button class="btn btn-danger btn-lg">Danger</button>
+</div>
+</div>
+<div class="example-wrapper half">
+<div class="example">
+<button class="btn btn-fill-default btn-sm">Default</button>
+<button class="btn btn-fill-primary btn-md">Primary</button>
+<button class="btn btn-fill-danger btn-lg">Danger</button>
+</div>
+</div>
+
+<h2 class="h2">Header Elements</h2>
+<div class="example-wrapper half">
+<div class="example">
+<div class="wrapper">
+  <button class="btn close"><i class="material-icons">close</i></button>
+</div>
+</div>
+</div>
+
+<div class="example-wrapper half">
+<div class="example">
+<div class="pagination flex-wrapper">
+  <span>File<span class="current-page">2</span> of <span class="total-page">82</span></span>
+  <span class="button-wrapper flex-wrapper">
+    <button class="arrow left">&#9664;</button>
+    <button class="arrow right">&#9664;</button>
+  </span>
+</div>
+</div>
+</div>
+
+<div class="example-wrapper ">
+<div class="example">
+<dl class="flex-wrapper">
+  <div class="wrapper divider">
+    <dt class="dt">Document Name</dt>
+    <dd class="dd">{this.props.doc.fileName}</dd>
+  </div>
+  <div class="wrapper divider">
+    <dt class="dt">Disease</dt>
+    <dd class="dd">{this.props.doc.messageType}</dd>
+  </div>
+  <div class="wrapper divider">
+    <dt class="dt">Document Type</dt>
+    <dd class="dd">{this.props.doc.documentType}</dd>
+  </div>
+</dl>
+</div>
+</div>
+
+<h2 class="h2">Header</h2>
+<div class="example-wrapper">
+<div class="example">
+  <div class="document-header">
+  <div class="flex-wrapper">
+    <div class="wrapper">
+      <button class="btn close"><i class="material-icons">close</i></button>
+    </div>
+    <dl class="flex-wrapper">
+      <div class="wrapper divider">
+        <dt class="dt">Document Name</dt>
+        <dd class="dd">{this.props.doc.fileName}</dd>
+      </div>
+      <div class="wrapper divider">
+        <dt class="dt">Disease</dt>
+        <dd class="dd">{this.props.doc.messageType}</dd>
+      </div>
+      <div class="wrapper divider">
+        <dt class="dt">Document Type</dt>
+        <dd class="dd">{this.props.doc.documentType}</dd>
+      </div>
+    </dl>
+  </div>
+  <div class="pagination flex-wrapper">
+    <span>File<span class="current-page">2</span> of <span class="total-page">82</span></span>
+    <span class="button-wrapper flex-wrapper">
+      <button class="arrow left">&#9664;</button>
+      <button class="arrow right">&#9664;</button>
+    </span>
+  </div>
+</div>
+</div>
+</div>
+
+
+<div class="example-wrapper half">
+<div class="example">
+<table class="table">
+  <thead class="thead">
+    <tr>
+      <th class="th">Saved Facts</th>
+      <th class="th date">Date/Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="tr">
+      <td class="td">
+        <dl>
+          <dt class="dt">Document Name</dt>
+          <dd class="dd">{this.props.doc.fileName}</dd>
+        </dl>
+      </td>
+      <td class="td">
+        <time class="date">11/02/2016</time>
+        <time class="time">5:04PM EST</time>
+      </td>
+    </tr>
+    <tr class="tr">
+      <td class="td">
+        <dl>
+          <dt class="dt">Document Name</dt>
+          <dd class="dd">{this.props.doc.fileName}</dd>
+        </dl>
+      </td>
+      <td class="td">
+        <time class="date">11/02/2016</time>
+        <time class="time">5:04PM EST</time>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<!-- <div class="example-wrapper full">
+<div class="example">
+<header class="top-header">
+  <dl class="def-list">
+    <dt class="def-term">patient name</dt>
+    <dd class="def-desc">Micky, Mouse</dd>
+  </dl>
+  <dl class="def-list">
+    <dt class="def-term">mrn</dt>
+    <dd class="def-desc">234567</dd>
+  </dl>
+</header>
+</div>
+</div> -->
+
+<h2>Checkbox Element</h2>
+
+<div class="example-wrapper full">
+<div class="example">
+<checkbox-element>
+  <div class="form-element-flex">
+  <div class="input-elements-wrapper">
+    <div class="form-element-flex">
+      <input type="checkbox"  class="input input--checkbox checkbox-text">
+      <label class="lymphoma">Lymphoma</label>
+    </div>
+    <div class="form-element-flex">
+      <input type="checkbox"  class="input input--checkbox checkbox-text">
+      <label for="leukemia">Leukemia</label>
+    </div>
+    <div class="form-element-flex">
+      <input type="checkbox"  class="input input--checkbox checkbox-text">
+      <label for="solid-tumor">Solid Tumor</label>
+    </div>
+    <div class="form-element-flex">
+      <div class="input-text">
+        <input type="text" id="cancer-solid-tumor" name="cancer-solid-tumor" placeholder="Solid Tumor" ng-model="viewModel" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 500, 'blur': 0 } }" ng-change="onChange(viewModel)" ng-disabled="disabledAttr()" class="ng-pristine ng-untouched ng-valid ng-empty"><!-- ngIf: label --><!-- ngIf: units -->
+      </div>
+    </div>
+  </div>
+
+  <div class="input-absent-buttons">
+    <div class="radio-buttons">
+      <input type="checkbox" class="radio-button__input">
+      <label>Not Assessed</label>
+      <input type="checkbox" class="radio-button__input">
+      <label>Not Reported</label>
+    </div>
+  </div>
+</div>
+</checkbox-element>
+</div>
+</div>
+
+<h2>Dual Input Elements</h2>
+<div class="example-wrapper full">
+<div class="example">
+<div class="dual-input-elements">
+      <div class="form-element-flex" model="diagnosisModel" id-attr="attributes-free_light_chains-kappa" name="attributes-free_light_chains-kappa" input-absent-keys="inputAbsentGetKeys(['na', 'nr'])">
+          <div class="input-elements-wrapper">
+              <number-element model="diagnosisModel" key="attributes.free_light_chains.kappa.amount" name-attr="attributes-free_light_chains-kappa-amount" id-attr="attributes-free_light_chains-kappa-amount" placeholder-attr="0" class="">
+                  <div class="form-element-flex">
+                      <div class="input-number">
+                          <!-- ngIf: prefix -->
+                          <input type="number" id="attributes-free_light_chains-kappa-amount" name="attributes-free_light_chains-kappa-amount" class="input-number__input">
+                          <!-- ngIf: label -->
+                      </div>
+                      <!-- ngIf: inputAbsentKeys().length -->
+                  </div>
+              </number-element>
+              <dropdown-element model="diagnosisModel" key="attributes.free_light_chains.kappa.unit" name-attr="attributes-free_light_chains-kappa-unit" id-attr="attributes-free_light_chains-kappa-unit" options="options.attributes.free_light_chains.kappa.unit" class="">
+                  <div class="form-element-flex dual-input">
+                      <!-- ngIf: prefix -->
+                      <select class="dropdown" name="attributes-free_light_chains-kappa-unit" id="attributes-free_light_chains-kappa-unit"><option value="" selected="selected" class=""></option><option label="g/dL" value="string:g_dl">g/dL</option><option label="mg/L" value="string:mg_L">mg/L</option></select>
+                      <!-- ngIf: inputAbsentKeys().length -->
+                  </div>
+              </dropdown-element>
+          </div>
+          <!-- ngIf: clearAll -->
+          <!-- ngIf: inputAbsentKeys().length -->
+          <div class="input-absent-buttons" model="viewModel" key="absent" id-attr="attributes-free_light_chains-kappa" input-absent-keys="inputAbsentKeys()">
+              <div class="radio-buttons">
+                  <!-- ngRepeat: item in buttonConfig --><input type="checkbox" class="radio-button__input" name="attributes-free_light_chains-kappa-not_assessed" id="attributes-free_light_chains-kappa-not_assessed">
+                  <label for="attributes-free_light_chains-kappa-not_assessed">Not Assessed</label>
+                  <!-- end ngRepeat: item in buttonConfig --><input type="checkbox" class="radio-button__input" name="attributes-free_light_chains-kappa-not_reported" id="attributes-free_light_chains-kappa-not_reported">
+                  <label for="attributes-free_light_chains-kappa-not_reported" class="">Not Reported</label>
+                  <!-- end ngRepeat: item in buttonConfig -->
+              </div>
+          </div>
+          <!-- end ngIf: inputAbsentKeys().length -->
+      </div>
+  </div>
+</div>
+</div>
+
+<!-- //////////////// -->
+<h2>Radio Button Element</h2>
+<div class="example-wrapper full">
+<div class="example">
+  <radio-button-element>
+      <div class="form-element-flex">
+          <div class="radio-buttons">
+              <!-- ngIf: label -->
+              <!-- ngRepeat: option in options --><input type="radio" class="radio-button__input name="urine-m-protein_immunofixation" id="urine-m-protein_immunofixation-true" ng-click="onClick()" value="true">
+              <label class="radio-button__label" for="urine-m-protein_immunofixation-true">Yes</label>
+              <!-- end ngRepeat: option in options --><input type="radio" class="radio-button__input  name="urine-m-protein_immunofixation" id="urine-m-protein_immunofixation-false" value="false">
+              <label class="radio-button__label" for="urine-m-protein_immunofixation-false">No</label>
+              <!-- end ngRepeat: option in options -->
+          </div>
+          <!-- ngIf: inputAbsentKeys().length -->
+          <div class="input-absent-buttons" disabled-attr="disabledAttr()" model="model" key="urine_m_protein.immunofixation" id-attr="urine-m-protein_immunofixation" input-absent-keys="inputAbsentKeys()">
+              <div class="radio-buttons">
+                  <!-- ngRepeat: item in buttonConfig --><input type="checkbox" class="radio-button__input" name="urine-m-protein_immunofixation-undetectable" id="urine-m-protein_immunofixation-undetectable">
+                  <label for="urine-m-protein_immunofixation-undetectable">Undetectable</label>
+                  <!-- end ngRepeat: item in buttonConfig --><input type="checkbox" class="radio-button__input" name="urine-m-protein_immunofixation-not_assessed" id="urine-m-protein_immunofixation-not_assessed">
+                  <label for="urine-m-protein_immunofixation-not_assessed">Not Assessed</label>
+                  <!-- end ngRepeat: item in buttonConfig --><input type="checkbox" class="radio-button__input" name="urine-m-protein_immunofixation-not_reported" id="urine-m-protein_immunofixation-not_reported">
+                  <label for="urine-m-protein_immunofixation-not_reported">Not Reported</label>
+                  <!-- end ngRepeat: item in buttonConfig -->
+              </div>
+          </div>
+          <!-- end ngIf: inputAbsentKeys().length -->
+      </div>
+  </radio-button-element>
+</div>
+</div>
+<!-- //////////////// -->
+<h2>Radio Button Element</h2>
+<div class="example-wrapper full">
+<div class="example">
+  <div class="unset-radio label" ng-class="{'label': label}">
+  <label class="inner-label ng-binding ng-scope" >Advanced Age</label>
+  <input type="radio" class="radio radio-toggle ng-pristine ng-untouched ng-valid ng-scope ng-empty" ng-class="{'two-lines': option.secondLine}" id="advanced_age-true" ng-value="option.id" name="advanced_age" ng-model="ngModel" ng-change="ngChange"
+          ng-disabled="disableWhen.test" ng-click="setClick($event)" value="false">
+          <label for="advanced_age-true" ng-repeat-end="" class="ng-binding ng-scope">Present</label>
+  <input type="radio" class="radio radio-toggle ng-pristine ng-untouched ng-valid ng-scope ng-empty" ng-class="{'two-lines': option.secondLine}" id="advanced_age-false" ng-value="option.id" name="advanced_age" ng-model="ngModel" ng-change="ngChange"
+          ng-disabled="disableWhen.test" ng-click="setClick($event)" value="false">
+          <label for="advanced_age-false" ng-repeat-end="" class="ng-binding ng-scope">Absent</label>
+  </div>
+
+</div>
+</div>
+<!-- //////////////// -->
+</div>
+    </section>
+  </main>
+
+
+</div>
+
+<script src='js/main.js'></script>
+<script src="js/venders/prism.js"  data-manual></script>
+<script src="js/venders/code.snippets.js"></script>
+</body>
+</html>
